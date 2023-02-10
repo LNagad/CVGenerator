@@ -4,6 +4,11 @@
     margin: 0;
     padding: 0;
 }
+
+.cardX, .sidesContainer {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
 li {
     list-style: none;
 }
@@ -71,6 +76,15 @@ p {
 @media only screen and (max-width: 768px) {
     /* For mobile phones: */
     .formContainer > div, #colSummary{
+        width: 100% !important;
+    }
+
+    .sidesContainer {
+        flex-wrap: wrap;
+        
+    }
+
+    .CVLeftSide, .CVRightSide{
         width: 100% !important;
     }
   }
