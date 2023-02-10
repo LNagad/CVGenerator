@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV Generator</title>
+  <link rel="stylesheet" href="assets/lib/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/site/site.css">
+</head>
+
+<body>
+  <main class="container-fluid">
+    <div class="row mt-4">
+      <div class="col-12 col-sm-12 col-md-8 offset-md-2">
+        <div class="card">
+          <div class="card-header bg-dark text-white text-center">
+            <h5>CV Generator Form</h5>
+          </div>
+          <div class="card-body d-flex flex-wrap justify-content-evenly formContainer">
+            <div class="col-12 text-center mb-2">
+              <h5>All information is required</h5>
+            </div>
+            <div class="col-12 d-flex justify-content-center">
+              <div class="col-6 mb-2" id="colSummary">
+                <label for="Summary" class="form-label">Summary: </label>
+                <textarea id="Summary" class="form-control"></textarea>
+              </div>
+            </div>
+            <div class="col-5 mb-2">
+              <label for="Name" class="form-label">Name: </label>
+              <input id="Name" type="text" class="form-control">
+            </div>
+            <div class="col-5 mb-2">
+              <label for="Address" class="form-label">Address: </label>
+              <input id="Address" type="text" class="form-control">
+            </div>
+            <div class="col-5 mb-2">
+              <label for="Email" class="form-label">Email: </label>
+              <input id="Email" type="email" class="form-control">
+            </div>
+            <div class="col-5 mb-2">
+              <label for="Phone" class="form-label">Phone: </label>
+              <input id="Phone" type="text" class="form-control">
+            </div>
+            <div class="col-5 mb-2">
+              <label for="Website" class="form-label">Website: </label>
+              <input id="Website" type="text" class="form-control">
+            </div>
+
+            <div class="col-5 mb-2">
+              <label for="Languages" class="form-label">Languages: </label>
+              <input id="Languages" type="text" class="form-control">
+            </div>
+            <div class="col-5 mb-2">
+              <label for="Jobs" class="form-label">Jobs: </label>
+              <input id="Jobs" type="text" class="form-control">
+            </div>
+            <div class="col-5 mb-2">
+              <label for="Education" class="form-label">Education: </label>
+              <input id="Education" type="text" class="form-control">
+            </div>
+            <div class="col-5 mb-2">
+              <label for="Skill" class="form-label">Skill: </label>
+              <input id="Skill" type="text" class="form-control">
+            </div>
+            <div class="col-5 mb-2">
+              <label for="Certifications" class="form-label">Certifications: </label>
+              <input id="Certifications" type="text" class="form-control">
+            </div>
+            <div class="col-12 mb-2 mt-4 d-flex justify-content-center">
+              <button onclick="validate()" type="button" class="btn btn-danger me-2 float-end">
+                Delete
+              </button>
+              <button onclick="generateCV()" type="button" class="btn btn-primary float-end">
+                Generate
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row mt-4 mb-4" id="CVContainer">
+      <!-- <div class="col-12 col-sm-12 col-md-8 offset-md-2">
+        <div class="d-flex sidesContainer">
+          <div class="w-25 CVLeftSide border border-2 bg-white">
+            <div class="CVTitle">
+              <div class="titleSpace mb-1"></div>
+              <h3 class="colorTitles text-uppercase fw-bold p-4 border-0">CHRISTOPER MORGAN</h3>
+            </div>
+            <div class="CVContact p-4">
+              <h4 class="colorTitles mb-3 fw-bold">Contact</h4>
+              <div class="mb-4">
+                <h6>Address</h6>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+              </div>
+              <div class="mb-4">
+                <h6>Phone</h6>
+                <p>8094581248</p>
+              </div>
+              <div class="mb-4">
+                <h6>Email</h6>
+                <p>202010775@itla.edu.do.</p>
+              </div>
+            </div>
+            <div class="CVLanguages p-4">
+              <h4 class="colorTitles mb-3 fw-bold">Languages</h4>
+              <div class="mb-4">
+                <ul class="list-group list-group-flush">
+                  <li>English</li>
+                  <li>Spanish</li>
+                  <li>German</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="w-75 CVRightSide border border-2 bg-white">
+            <div class="CVSummary p-4">
+              <h4 class="fw-bold colorTitles">Summary</h4>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas quis fugit, cupiditate corporis sequi temporibus in iure delectus sit, libero, dignissimos ut cum suscipit voluptas magni laboriosam veritatis accusantium similique molestiae? Perferendis autem, minus eius maxime quod tempora dicta fugiat!</p>
+            </div>
+            <div class="CVSkills p-4">
+              <h4 class="fw-bold colorTitles">Skill Highlights</h4>
+              <ul>
+                <li class="list-itemX">Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+                <li class="list-itemX">Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+                <li class="list-itemX">Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+              </ul>
+            </div>
+            <div class="CVEducation p-4">
+              <h4 class="fw-bold colorTitles">Education</h4>
+              <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+            <div class="CVCertifications p-4">
+              <h4 class="fw-bold colorTitles">Certifications</h4>
+              <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+            <div class="CVBottom">
+              <div class="titleSpace border border-1"></div>
+            </div>
+          </div>
+        </div>
+      </div> -->
+    </div>
+  </main>
+  <script src="assets/lib/bootstrap/js/bootstrap.min.js"></script>
+  <script src="assets/js/index/index.js"></script>
+</body>
+
+</html>

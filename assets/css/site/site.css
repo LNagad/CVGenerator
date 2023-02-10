@@ -1,0 +1,76 @@
+/* General styles */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+li {
+    list-style: none;
+}
+
+.list-itemX{
+    list-style: disc;
+}
+
+main{
+    max-width: 1920px;
+}
+
+p {
+    font-size: 18px;
+}
+
+.errorBorder {
+    border: 2px solid red;
+}
+.successBorder {
+    border: 2px solid rgb(0, 128, 23);
+}
+
+/* cv styles */
+
+.CVLeftSide{
+    width: 35% !important;
+    border-right: 0px !important;
+}
+
+.CVRightSide {
+    width: 65% !important;
+}
+
+/*    ------- CVleft side */
+
+.colorTitles {
+    color: #164f90;
+    border-bottom: 2px solid rgba(22, 79, 144, 0.2);
+    padding-bottom: 7px;
+}
+
+.CVTitle{
+    height: 200px;
+}
+
+.CVTitle .titleSpace {
+    height: 30%;
+    background: #164f90;
+}
+
+/* ----- CV right side */
+
+.CVSummary{
+    margin-top: 62px;
+}
+
+.CVBottom .titleSpace {
+    height: 60px;
+    background: #164f90;
+ 
+}
+
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    .formContainer > div, #colSummary{
+        width: 100% !important;
+    }
+  }
